@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>CSS - Panier</title>
+            <meta charset="UTF-8">
+            <script src="panier.js" defer></script>
+            <link rel="stylesheet" href="stylePanier.css">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crete+Round">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+            <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+            
+      </head>
+    <body>
+                <!-- Barre de navigation -->
+  <nav>
+    <h1>CSS on line</h1>
+    <div class="onglets">
+      <a href="accueil.html">Accueil</a>
+      <a href="panier.html">Panier</a>
+      <a href="equipe.html">Equipe</a>
+        <p class="link">Nouveautés</p>
+        <p class="link">Homme</p>
+        <p class="link">Femme</p>
+        <p class="link">Enfant</p>
+      <form>
+        <input type="search" placeholder="Rechercher">
+      </form>
+      
+      <p><i class="far fa-heart"></i></p>
+      <p><i class="fas fa-shopping-cart"></i></p>
+    </div>
+  </nav>
+  <!-- Fin de la barre de navigation -->
+
+        <!-- Tete de page -->
+        <header>
+          <h1>CSS, donne du style à ton sport !</h1>
+          <a class="button-1">Naviguer<i class="fas fa-paper-plane"></i></a>
+        </header>
+
+        <section id="basket" class="flex-column-centre">        
+        <!--Titre du Panier-->
+            <div id="blocTitrePanier" class="flex-start size80">
+                <h2 id="titre-panier">
+                  PANIER
+                </h2>
+              </div>
+              <!--Fiche Produit -->
+              <div id="fiche-produit" class="flex-around">
+                <div id="injectJs">
+                    <div id="basketProduit" class="flex-around">
+                        <div id="blocImage">
+                            <img src="imagePanier/imageChaussure.jpg" alt="Chaussure Nike">
+                        </div>
+                        <div id="blocProduit" class="flex-column-around">
+                            <h2>Produit</h2>
+                            <p>145 €</p>
+                            <p>Ref:CD4373-104</p>
+                            <p><i class="fas fa-truck"></i> en stock</p>
+                        </div>
+                        <div id="bloc-change-produit" class="flex-around">
+                          <div class="flex-center">
+                            <button class="bouton-moins" id="decrement-count">-</button>
+                              <span class="produit-quantite" id="total-count">0</span>
+                            <button class="bouton-plus" id="increment-count">+</button>
+                          </div>
+                        <div><i class="fas fa-trash-alt rouge"></i></div>
+                    </div>
+                </div>
+              </div>
+                      <!-- Recap Panier -->
+        <div id="basket-recap">
+            <h2 class="titre-recap rouge">Récapitulatif</h2>
+            <div class="flex-around">
+              <span> <i id="total-count2">0</i> article</span>
+              <span> <i id="totalPrix">145</i>€</span>
+            </div>
+            <div class="flex-around">
+              <p>Livraison</p>
+              <p id="prixLivraison">offert</p>
+            </div>
+            <div class="trait-design"></div>
+            <div class="flex-around">
+              <h3>Total TTC</h3>
+              <span> <i id="totalPrix2">145</i>€</span>
+            </div>
+            <div>
+              <a id="continueCommande" class="flex-around" href="#ancreForm">
+                CONTINUER <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+            <div>
+              <p><i class="fas fa-truck vert"></i> Livraison sous 3 semaines</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-start size80">
+          <a class="continuer" href="index.html">
+            <i class="fas fa-chevron-left"></i> CONTINUER MES ACHATS
+          </a>
+        </div>
+        <!-- Formulaire -->
+        <div id="ancreForm">
+          <form id="formulaireContact" action="post">
+            <h2 class="flex-centre">Informations Personnelles</h2>
+            <div class="nom-prenom flex-centre">
+              <div class="flex-column-start">
+                <label for="prenom" class="flex-start">Prénom</label>
+                <input class="champ" id="prenom" type="text" />
+                <span id="errorPrenom"></span>
+              </div>
+              <div class="flex-column-start">
+                <label for="nom" class="flex-start">Nom</label>
+                <input class="champ" id="nom" type="text" />
+                <span id="errorNom"></span>
+              </div>
+            </div>
+            <div class="flex-column-centre">
+              <div class="flex-column-start">
+                <label for="adresse" class="flex-start">Adresse</label>
+                <input class="champ" id="adresse" type="text" />
+                <span id="errorAdresse"></span>
+              </div>
+              <div class="flex-column-start">
+                <label for="ville" class="flex-start">Ville</label>
+                <input class="champ" id="ville" type="text" />
+                <span id="errorVille"></span>
+              </div>
+              <div class="flex-column-start">
+                <label for="email" class="flex-start">Email</label>
+                <input class="champ" id="email" type="mail" />
+                <span id="errorEmail"></span>
+              </div>
+              <button class="bouton-commande" type="submit">Commander</button>
+            </div>
+          </form>
+        </div>
+        </section>
+        <!-- Pied de page -->
+        <footer>
+          <p>&copy; Contactez-nous au 06 00 70 00 45</p>
+          <div class="social-media">
+            <p><i class="fab fa-facebook-f"></i></p>
+            <p><i class="fab fa-twitter"></i></p>
+            <p><i class="fab fa-instagram"></i></p>
+            <p><i class="fab fa-linkedin-in"></i></p>
+          </div>
+        </footer>
+    </body>
+</html>
